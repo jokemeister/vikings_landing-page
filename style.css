@@ -1,0 +1,477 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 0;
+}
+
+.nav_list_item_svg {
+    opacity: 0;
+    transition: all .6s;
+}
+
+.nav_list_item_svg.is-active {
+    opacity: 1;
+}
+
+.nav_list_item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.nav_list_item_link:hover {
+    color: #85CCDC;
+    text-decoration: underline;
+    transition: all .4s;
+}
+
+.nav_list_item_link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.16;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* /header */
+
+
+/* MAIN */
+
+.hero {
+    background-image: url(./img/main-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero_block {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    padding: 100px 0 100px 0;
+    background: #0E0E0E;
+}
+
+.about_title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.about_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_list {
+    width: 205px;
+    height: 231px;
+    padding: 0;
+}
+
+.about_list_item {
+    margin-bottom: 21px;
+}
+
+.about_list_item_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E5E5E5;
+    margin: 0;
+}
+
+.about_block_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 775px;
+}
+
+.tagline {
+    position: relative;
+    background-image: url(./img/tagline-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.tagline_block_img:hover,
+.tagline_block_img:focus {
+    opacity: .7;
+    transition: all .4s;
+}
+
+.tagline_text:hover,
+.tagline_text:focus {
+    opacity: .7;
+    transition: all .4s;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 99;
+    top: -200%;
+    transition: all .4s;
+}
+.popup.is-active {
+    top: 0;
+}
+
+.popup_body {
+    width: 90%;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #fff;
+}
+
+
+
+.popup_body_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* .tagline_block {
+    position: absolute;
+    top: 444px;
+    left: 960px;
+    align-self: flex-end;
+    width: 620px;
+} */
+
+.tagline_block-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 41vh;
+    align-items: flex-end;
+}
+
+.tagline_block-text_text {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    color: #85CCDC;
+}
+
+.tagline_block-text_text_left {
+    margin-right: 313px;
+}
+
+.tagline_block-text_text_right {
+    margin-right: 19px;
+}
+
+.tagline_block {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 265px;
+    align-items: center;
+}
+
+.tagline_block_img {
+    width: 100px;
+    height: 100px;
+    margin-right: 12px;
+}
+.tagline_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.seasons {
+    background-color: #000;
+    height: 1014px;
+}
+
+.seasons_title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.seasons_title {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 172px;
+}
+
+.seasons_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 100px 75px;
+    margin-top: 119px;
+}
+
+.seasons_grid_card {
+    position: relative;
+    transition: all .4s ease-in-out;
+    z-index: 10;
+}
+
+.seasons_grid_card_popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 11;
+    background-color: #0E0E0ECC;
+}
+
+.seasons_grid_card_popup_btn {
+    color: #FFFFFF;
+    position: absolute;
+    width: 300px;
+    height: 65px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0E0E0E;
+    opacity: 1;
+    font-family: 'Roboto Condensed';
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.seasons_grid_card:hover .seasons_grid_card_popup {
+    display: block;
+}
+
+.seasons_grid_card::before {
+    z-index: 8;
+    position: absolute;
+    top: -69px;
+    left: -4px;
+    color: #600E09;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 112px;
+    padding: 0;
+}
+
+.seasons_grid_card:nth-child(1)::before {
+    content: "01";
+}
+
+.seasons_grid_card:nth-child(2)::before {
+    content: "02";
+}
+
+.seasons_grid_card:nth-child(3)::before {
+    content: "03";
+}
+
+.seasons_grid_card:nth-child(4)::before {
+    content: "04";
+}
+
+.seasons_grid_card:nth-child(5)::before {
+    content: "05";
+}
+
+.seasons_grid_card:nth-child(6)::before {
+    content: "06";
+}
+
+.first_season {
+    background-image: url(./img/season_1.jpg);
+}
+
+.second_season {
+    background-image: url(./img/season_2.jpg);
+}
+
+.third_season {
+    background-image: url(./img/season_3.png);
+}
+
+.fourth_season {
+    background-image: url(./img/season_4.png);
+}
+
+.fifth_season {
+    background-image: url(./img/season_5.png);
+}
+
+.sixth_season {
+    background-image: url(./img/season_6.png);
+}
+
+.heroes {
+    background-color: #0E0E0E;
+}
+
+.heroes_title {
+    padding-top: 100px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.heroes_block {
+    display: grid;
+    grid-template-columns: 775px 349px;
+    gap: 75px;
+    padding-bottom: 100px;
+}
+
+.slideshow-container {
+    max-width: 775px;
+    position: relative;
+    margin: auto;
+    height: 450px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    max-width: 775px;
+    max-height: 450px;
+    overflow: hidden;
+  }
+
+  .mySlides-text {
+      display: block;
+      overflow: hidden;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.heroes_block_right_name {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    color: #85CCDC;
+}
+
+.heroes_block_right_description {
+    margin-top: 21px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: #0E0E0E;
+}
+
+.footer_text {
+    padding: 15px 0;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+}
